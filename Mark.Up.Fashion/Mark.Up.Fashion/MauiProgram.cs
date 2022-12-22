@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components.WebView.Maui;
-using Mark.Up.Fashion.Data;
+using Mark.Up.Fashion;
 
 namespace Mark.Up.Fashion;
 
@@ -20,8 +20,6 @@ public static class MauiProgram
 		builder.Services.AddBlazorWebViewDeveloperTools();
 #endif
 		
-		builder.Services.AddSingleton<WeatherForecastService>();
-
 		return builder.Build();
 	}
 }
