@@ -1,14 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Dapper;
 using Microsoft.AspNetCore.Components;
-using System.Data.Common;
-using System.Data.SqlClient;
-using System.Diagnostics.Metrics;
-using System.Net.NetworkInformation;
 using System.Runtime.Intrinsics.X86;
 using Mark.Up.Fashion.Models.Users;
 using MySqlConnector;
@@ -31,7 +23,7 @@ namespace Mark.Up.Fashion.Pages
 				{
 					// Query the database to check if the provided username and password match a user in the database
 					var user = await connection.QueryFirstOrDefaultAsync<User>(
-						"SELECT * FROM `christfashion.users` WHERE `email` = @Email AND `password` = @Password",
+						"SELECT * FROM `christfashion`.`users` WHERE `email` = @Email AND `password` = @Password",
 						new { Email, Password });
 
 					if (user != null)
@@ -42,7 +34,7 @@ namespace Mark.Up.Fashion.Pages
 					else
 					{
 						// The login was unsuccessful, so display an error message
-						
+						NavigationManager.NavigateTo("/display-items");
 						// TODO: Display error message
 					}
 				}
