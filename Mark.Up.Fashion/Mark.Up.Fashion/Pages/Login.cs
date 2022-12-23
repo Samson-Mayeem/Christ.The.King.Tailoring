@@ -16,21 +16,22 @@ using MySqlConnector;
 namespace Mark.Up.Fashion.Pages
 {
 	
-		public class LoginModel : ComponentBase
+		public class Login : ComponentBase
 		{
 			[Inject]
 			protected NavigationManager NavigationManager { get; set; }
 
 			protected string Email { get; set; }
 			protected string Password { get; set; }
-
-			protected async Task HandleValidSubmit()
+		private string _connectionString = "MySQLConnection";
+		protected async Task HandleValidSubmit()
 			{
-				using (var connection = new MySqlConnection("server = localhost, user = root,password=hello, port=3306"))
+
+				using (var connection = new MySqlConnection(_connectionString))
 				{
 					// Query the database to check if the provided username and password match a user in the database
 					var user = await connection.QueryFirstOrDefaultAsync<User>(
-						"SELECT * FROM users WHERE email = @Email AND password = @Password",
+						"SELECT * FROM `christfashion.users` WHERE `email` = @Email AND `password` = @Password",
 						new { Email, Password });
 
 					if (user != null)
