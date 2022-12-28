@@ -21,16 +21,15 @@
                     <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
                                             <label class="form-label" for="name">Your Name</label>
-                                            <input type="text" id="name" class="form-control" bind-value-oninput="_user.username"  />
+                                            <input type="text" id="name" class="form-control" bind-value-oninput="@_user.Username"  />
                     </div>
-                  </div>
+                    </div>
 
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
                                             <label class="form-label" for="email">Your Email</label>
-
-                                            <input type="email" id="email" class="form-control" bind-value-oninput="_user.email" />
+                                            <input type="email" id="email" class="form-control" bind-value-oninput="@_user.Email" />
                     </div>
                   </div>
 
@@ -38,15 +37,14 @@
                                         <i class="fas fa-key fa-lg me-3 fa-fw"></i>
                                         <div class="form-outline flex-fill mb-0">
                                             <label class="form-label" for="form3Example4cd">Password</label>
-                                            <input type="password" id="form3Example4cd" class="form-control" bind-value-oninput="_user.password" />
+                                            <input type="password" id="form3Example4cd" class="form-control" bind-value-oninput="@_user.Password" />
                                         </div>
-
                   </div>
                         <div class="d-flex flex-row align-items-center mb-4">
-                            <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                                <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                                 <div class="form-outline flex-fill mb-0">
                                      <label class="form-label" for="dob">Date of birth</label>
-                                            <input type="date" id="dob" class="form-control" bind-value-oninput="_user.dob" />
+                                            <input type="date" id="dob" class="form-control" bind-value-oninput="@_user.Dob" />
                                      
                                 </div>
                         </div>
@@ -56,15 +54,11 @@
                                         <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                                         <div class="form-outline flex-fill mb-0">
                                             <label class="form-label" for="address">Address</label>
-
-                                            <input type="text" id="address" class="form-control" bind-value-oninput="_user.address" />
+                                            <input type="text" id="address" class="form-control" bind-value-oninput="@_user.Address" />
                                         </div>
-                                    </div>
-                                    
+                                    </div> 
                                     <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                                        <button type="button"
-                                                class="btn btn-primary btn-lg text-center fw-bold mb-5 mx-1 mx-md-4 mt-4"
-                                                @onclick="OnSave">
+                                        <button type="button" class="btn btn-primary btn-lg text-center fw-bold mb-5 mx-1 mx-md-4 mt-4" @onclick="OnSave">
                                             Sign up
                                         </button>
                                     </div>
@@ -76,7 +70,7 @@
                                     </div>
                                     <div class="mt-2 text-end">
                                         <NavLink class="nav-link" href="/">
-                                            <span>Click here to creat account!</span>
+                                            <span>Click here to login</span>
                                         </NavLink>
                                     </div>
                                 </form>

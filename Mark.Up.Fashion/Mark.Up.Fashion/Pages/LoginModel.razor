@@ -1,6 +1,8 @@
 ﻿@page "/"
-
-
+@using Mark.Up.Fashion
+@using Mark.Up.Fashion.Models.Users;
+@inject Login _login
+@using Mark.Up.Fashion.Pages
 <head>
 	<!-- Other head tags -->
 	<link href="~/css/login.css" rel="stylesheet" />
@@ -13,16 +15,26 @@
 			<h3 class="form-signin-heading">Please Sign In</h3>
 			  <hr class="colorgraph"><br>
 
-			<input type="email" class="form-control" name="email" placeholder="email" required="" autofocus="" />
-			<input type="password" class="form-control" name="Password" placeholder="Password" required=""/>     		  
-			<button class="btn btn-lg btn-primary btn-block"  name="Submit" value="Login" type="Submit">Login</button>  			
+			<input type="email" class="form-control" name="email" placeholder="email" required="" autofocus="" @bind ="user.Email"/>
+			<input type="password" class="form-control" name="Password" placeholder="Password" required="" @bind="user.Password"/>     		  
+			<button class="btn btn-lg btn-primary btn-block"  name="Submit" value="Login" type="Submit" >Login</button>  			
 		</form>			
 	</div>
 	<div class="mt-2 text-end">
-		<NavLink class="nav-link" href="registration">
+		<NavLink class="nav-link" href="/registration">
 			<span>Click here to creat account!</span>
 		</NavLink>
 	</div>
 
 </div>
+
+@code{
+	User user = new User();
+	private bool _isLoading;
+
+	private async Task logger()
+	{
+		
+	}
+}
 

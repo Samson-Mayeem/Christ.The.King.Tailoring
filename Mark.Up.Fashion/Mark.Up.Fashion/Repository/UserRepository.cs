@@ -26,7 +26,7 @@ namespace Mark.Up.Fashion.Repository
                 using (var connection = _connectionFactory.Connection)
                 {
                     connection.Open();
-                    return await connection.QueryAsync<User>("SELECT * FROM users");
+                    return await connection.QueryAsync<User>("SELECT * FROM `christfashion`.`users`");
                 }
             }
 
@@ -35,7 +35,7 @@ namespace Mark.Up.Fashion.Repository
                 using (var connection = _connectionFactory.Connection)
                 {
                     connection.Open();
-                    return await connection.QueryFirstOrDefaultAsync<User>("SELECT * FROM users WHERE id = @Id", new { Id = id });
+                    return await connection.QueryFirstOrDefaultAsync<User>("SELECT * FROM `christfashion`.`users` WHERE `id` = @Id", new { Id = id });
                 }
             }
 
@@ -44,7 +44,7 @@ namespace Mark.Up.Fashion.Repository
                 using (var connection = _connectionFactory.Connection)
                 {
                     connection.Open();
-                    await connection.ExecuteAsync("INSERT INTO christfashion.users (username, email, password, dob, address) VALUES (@Username, @Email, @Password, @Dob, @Address)", user);
+                    await connection.ExecuteAsync("INSERT INTO `christfashion`.`users` (username, email, password, dob, address) VALUES (@Username, @Email, @Password, @Dob, @Address)", user);
                 }
             }
 
@@ -53,7 +53,7 @@ namespace Mark.Up.Fashion.Repository
                 using (var connection = _connectionFactory.Connection)
                 {
                     connection.Open();
-                    await connection.ExecuteAsync("UPDATE christfashion.users SET username = @Username, email = @Email,password = @Password, dob = @Address  WHERE id = @Id", user);
+                    await connection.ExecuteAsync("UPDATE `christfashion`.`users` SET `username` = @Username, `email` = @Email, `password` = @Password, `dob` = @Address  WHERE `id` = @Id", user);
                 }
             }
 
@@ -62,7 +62,7 @@ namespace Mark.Up.Fashion.Repository
                 using (var connection = _connectionFactory.Connection)
                 {
                     connection.Open();
-                    await connection.ExecuteAsync("DELETE FROM christfashion.users WHERE id = @Id", new { Id = id });
+                    await connection.ExecuteAsync("DELETE FROM `christfashion`.`users` WHERE `id` = @Id", new { Id = id });
                 }
             }
         }
