@@ -59,7 +59,7 @@
     <ItemGroup>
       <Folder Include="Container\CategoryContent\" />
       <Folder Include="Container\ProductContent\" />
-      <Folder Include="wwwroot\NewFolder\" />
+      <Folder Include="wwwroot\js\" />
     </ItemGroup>
 
     <ItemGroup>
