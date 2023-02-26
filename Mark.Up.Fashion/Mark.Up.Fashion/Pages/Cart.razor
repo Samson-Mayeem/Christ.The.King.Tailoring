@@ -1,0 +1,58 @@
+﻿@page "/cart"
+<head>
+    <link href="./css/cart.css" rel="stylesheet" />
+</head>
+<div class="cart-container">
+    <h2>Shopping Cart</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Product 1</td>
+                <td>$10.00</td>
+                <td>
+                    
+                    <input type="number" class="quantity-input" value="1">
+                    <button class="quantity-btn plus">+</button><span></span>
+                    <button class="quantity-btn minus">-</button>
+                </td>
+                <td class="product-total">$10.00</td>
+            </tr>
+            <tr>
+                <td>Product 2</td>
+                <td>$15.00</td>
+                <td>
+                    <button class="quantity-btn minus">-</button>
+                    <input type="number" class="quantity-input" value="1">
+                    <button class="quantity-btn plus">+</button>
+                </td>
+                <td class="product-total">$15.00</td>
+            </tr>
+            <tr>
+                <td>Product 3</td>
+                <td>$20.00</td>
+                <td>
+                    <button class="quantity-btn minus">-</button>
+                    <input type="number" class="quantity-input" value="1">
+                    <button class="quantity-btn plus">+</button>
+                </td>
+                <td class="product-total">$20.00</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="cart-total">
+        <span>Total:</span>
+        <span class="total-price">$45.00</span>
+    </div>
+</div>
+
+@code {
+
+}
