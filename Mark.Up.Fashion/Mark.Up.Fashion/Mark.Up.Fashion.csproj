@@ -59,7 +59,16 @@
     <ItemGroup>
       <Folder Include="Container\CategoryContent\" />
       <Folder Include="Container\ProductContent\" />
-      <Folder Include="wwwroot\js\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="wwwroot\Images\african-design.jpg" />
+      <None Include="wwwroot\Images\African-Men.jpg" />
+      <None Include="wwwroot\Images\Ankara.avif" />
+      <None Include="wwwroot\Images\new-african.jpg" />
+      <None Include="wwwroot\Images\South-African-Men.jpg" />
+      <None Include="wwwroot\Images\South-African-Women.jpg" />
+      <None Include="wwwroot\Images\Urban-Zulu.jpg" />
     </ItemGroup>
 
     <ItemGroup>
