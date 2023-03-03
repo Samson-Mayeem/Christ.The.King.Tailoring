@@ -1,6 +1,5 @@
-﻿@page "/product"
+﻿@page "/"
 <head>
-    <!-- Other head tags -->
     <link href="./css/products.css" rel="stylesheet" />
 </head>
 <form class="d-flex">
@@ -41,7 +40,7 @@
         <h3>Contact Us</h3>
         <ul>
           <li>Address: 123 BMC St, Nalerigu Ghana</li>
-          <li>Phone: (123) 456-7890</li>
+          <li>Phone: (233) 456-7890</li>
           <li>Email: info@ctk.com</li>
         </ul>
       </div>
@@ -57,5 +56,8 @@
   </div>
 </div>
 @code {
-
+    private int Counter(int count)
+    {
+        return count++;
+    }
 }
