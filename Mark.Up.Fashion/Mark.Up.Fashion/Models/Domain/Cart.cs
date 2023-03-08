@@ -8,7 +8,7 @@ namespace Mark.Up.Fashion.Models.Domain
 {
 	public class Cart
 	{
-		public int Id { get; set; }
+		public int CartId { get; set; }
 		public string CartItem { get;}
 	}
 }

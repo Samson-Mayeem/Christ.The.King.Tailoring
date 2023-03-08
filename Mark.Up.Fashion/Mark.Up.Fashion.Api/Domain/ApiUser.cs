@@ -1,6 +1,6 @@
-namespace Mark.Up.Fashion.Api
+namespace Mark.Up.Fashion.Api.Domain
 {
-    public class WeatherForecast
+    public class ApiUser
     {
         public DateTime Date { get; set; }
 
